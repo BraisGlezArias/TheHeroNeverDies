@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/Modular Castle/DemoScene/castleDemo.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
