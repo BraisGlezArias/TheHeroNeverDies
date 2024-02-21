@@ -15,9 +15,14 @@ public class GameManager : MonoBehaviour {
     public bool nextTurn;
     public int turn;
     private Coroutine blinkCoroutine;
-    private bool gameStart = false;
+    public bool gameStart = false;
     public Camera mainCamera;
     public Transform cameraGameplay;
+    public static GameManager instance;
+
+    void Awake() {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -39,9 +44,11 @@ public class GameManager : MonoBehaviour {
             }
         }
 
-        if (Input.anyKeyDown && !gameStart) {
-            StopCoroutine(blinkCoroutine);
-            StartCoroutine(TransToStory());
+        if (Input.anyKeyDown && !gameStart && !Story.instance.storyOn) {
+            if (turn == 1) {
+                StopCoroutine(blinkCoroutine);
+                StartCoroutine(TransToStory());
+            }
         }
     } 
 
@@ -85,9 +92,10 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(6f);
         GetComponent<AudioSource>().Stop();
         story.transform.gameObject.SetActive(true);
+        Story.instance.storyOn = true;
     }
 
-    private void TransToGameplay() {
+    public void TransToGameplay() {
         story.transform.gameObject.SetActive(false);
         GetComponent<AudioSource>().clip = combatMusic;
         GetComponent<AudioSource>().Play();
