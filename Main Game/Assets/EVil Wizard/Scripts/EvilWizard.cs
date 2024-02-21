@@ -42,6 +42,7 @@ public class EvilWizard : MonoBehaviour
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_EvilWizard>();
+        death = true;
     }
 
     // Update is called once per frame
@@ -118,20 +119,8 @@ public class EvilWizard : MonoBehaviour
             // Move
             m_body2d.velocity = new Vector2(m_facingDirection * m_speed, m_body2d.velocity.y);
 
-            //Death
-            if (Input.GetKeyDown("e"))
-            {
-                m_animator.SetTrigger("Death");
-            }
-                
-            //Hurt
-            else if (Input.GetKeyDown("q"))
-            {
-                m_animator.SetTrigger("Hurt");
-            }   
-
             //Attack
-            else if(Input.GetKeyDown("1") && m_timeSinceAttack > 0.75f && mana >= 10 && !enemy.GetComponent<HeroKnight>().death) 
+            if(Input.GetKeyDown("1") && m_timeSinceAttack > 0.75f && mana >= 10 && !enemy.GetComponent<HeroKnight>().death) 
             {
                 m_animator.SetTrigger("Attack1");
                 if (GetComponent<SpriteRenderer>().flipX) {

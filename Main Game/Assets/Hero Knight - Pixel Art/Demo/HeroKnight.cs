@@ -67,6 +67,9 @@ public class HeroKnight : MonoBehaviour {
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
+		m_facingDirection = 0f;
+		m_animator.SetBool("Grounded", true);
+		death = true;
     }
 
     // Update is called once per frame
