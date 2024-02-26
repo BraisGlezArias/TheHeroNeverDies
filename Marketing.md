@@ -52,13 +52,13 @@ Become the Final Boss in this Indie Boss Survivor videogame where you control an
 
 6.  Date: Tuesday Afternoon
 
-    Tweet: 
+    Tweet: When you face the Final Boss vs When you are the Final Boss.
 
 7.  Date: Tuesday Afternoon
 
     Tweet: The Hero NEVER Dies, the ground-breaking Boss Survivor Indie Videogame is already available at https://mickael-vavrinec.itch.io/the-hero-never-dies.
 
-    After playing it, don't forget to share your score here at X!
+    Play it now for free! And don't forget to share your score here at Twitter!
 
 ## CALL-TO-ACTION
 
