@@ -16,6 +16,8 @@ public class EvilWizard : MonoBehaviour
 	private float timeRecoverMana = 0;
 	public int damage;
 
+    public bool replay = false;
+
     public GameObject enemy;
 	
 	public GameObject lightningPre;
@@ -28,7 +30,7 @@ public class EvilWizard : MonoBehaviour
     public bool fireExists = false;
 
     public Animator m_animator;
-    private Rigidbody2D m_body2d;
+    public Rigidbody2D m_body2d;
     private Sensor_EvilWizard m_groundSensor;
     private bool m_grounded = false;
     public float m_timeSinceAttack = 0.0f;
@@ -193,6 +195,13 @@ public class EvilWizard : MonoBehaviour
         m_body2d.velocity = new Vector2(0, 0);
         if (lightningExists) {
             Destroy(lightning);
+        }
+        if (!replay) {
+            Story.instance.ending = true;
+            Story.instance.story.transform.GetChild(3).GetComponent<TextMesh>().text =  Story.instance.endText[0];
+            StartCoroutine(GameManager.instance.storyTurn());
+        } else {
+            StartCoroutine(ReplayManager.instance.ending());
         }
 	}
 }

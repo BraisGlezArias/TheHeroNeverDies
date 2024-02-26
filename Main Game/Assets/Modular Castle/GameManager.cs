@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour {
     public Canvas mainMenu;
     public Canvas gameplay;
     public Canvas story;
+    public Canvas buttons;
     public bool nextTurn;
     public int turn;
     private Coroutine blinkCoroutine;
@@ -39,20 +41,22 @@ public class GameManager : MonoBehaviour {
     {
         if (enemy.GetComponent<HeroKnight>().death && gameStart) {
             if (!nextTurn) {
-                StartCoroutine(newTurn());
+                if (turn < 3) {
+                    StartCoroutine(storyTurn());
+                } else {
+                    StartCoroutine(newTurn());
+                }
                 nextTurn = true;
             }
         }
 
         if (Input.anyKeyDown && !gameStart && !Story.instance.storyOn) {
-            if (turn == 1) {
-                StopCoroutine(blinkCoroutine);
-                StartCoroutine(TransToStory());
-            }
+            StopCoroutine(blinkCoroutine);
+            StartCoroutine(TransToStory());
         }
     } 
 
-    IEnumerator newTurn() {
+    private IEnumerator newTurn() {
         turn++;
         if (turn <= 10) {
             enemy.GetComponent<HeroKnight>().m_speed += 0.5f;
@@ -62,7 +66,7 @@ public class GameManager : MonoBehaviour {
 
         yield return new WaitForSeconds(3f);
 
-        turno.transform.GetChild(0).transform.GetComponent<TextMesh>().text = "Round " + turn; 
+        turno.transform.GetComponent<TextMesh>().text = "Round " + turn; 
 
         enemy.GetComponent<HeroKnight>().health = 100;
         enemy.GetComponent<HeroKnight>().energy = 100;
@@ -72,6 +76,39 @@ public class GameManager : MonoBehaviour {
         enemy.GetComponent<HeroKnight>().death = false;
         enemy.GetComponent<HeroKnight>().m_animator.SetBool("Death", enemy.GetComponent<HeroKnight>().death);
         nextTurn = false;
+    }
+
+    public IEnumerator storyTurn() {
+        if (player.GetComponent<EvilWizard>().death) {
+            player.GetComponent<EvilWizard>().m_body2d.velocity = new Vector2(0, 0);
+            yield return new WaitForSeconds(1.5f);
+        } else {
+            GetComponent<AudioSource>().Pause();
+            player.GetComponent<EvilWizard>().death = true;
+            player.GetComponent<EvilWizard>().m_animator.SetInteger("AnimState", 0);
+            player.GetComponent<EvilWizard>().m_body2d.velocity = new Vector2(0, 0);
+            if (player.GetComponent<EvilWizard>().lightningExists) {
+                yield return new WaitForSeconds(0.7f);
+                Destroy(player.GetComponent<EvilWizard>().lightning);
+                yield return new WaitForSeconds(0.8f);
+            } else {
+                yield return new WaitForSeconds(1.5f);
+            }
+        }
+        Story.instance.storyOn = true;
+        gameplay.transform.gameObject.SetActive(false);
+        story.transform.gameObject.SetActive(true);
+        story.transform.GetChild(1).transform.GetChild(1).gameObject.SetActive(false);
+        story.transform.GetChild(1).transform.GetChild(2).gameObject.SetActive(false);
+        player.GetComponent<EvilWizard>().fire.SetActive(false);
+        player.GetComponent<EvilWizard>().fireRev.SetActive(false);
+        turn++;
+        enemy.GetComponent<HeroKnight>().m_speed += 0.5f;
+        enemy.GetComponent<HeroKnight>().defense += 10;
+        enemy.GetComponent<HeroKnight>().damage += 3;
+        enemy.GetComponent<HeroKnight>().Sword.SetActive(false);
+        enemy.GetComponent<HeroKnight>().revSword.SetActive(false);
+        yield return null;
     }
 
     private IEnumerator Blink() {
@@ -89,7 +126,7 @@ public class GameManager : MonoBehaviour {
     private IEnumerator TransToStory() {
         mainCamera.transform.gameObject.GetComponent<CameraMovement>().transition = true;
         mainMenu.transform.gameObject.SetActive(false);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(7.5f);
         GetComponent<AudioSource>().Stop();
         story.transform.gameObject.SetActive(true);
         Story.instance.storyOn = true;
@@ -97,12 +134,30 @@ public class GameManager : MonoBehaviour {
 
     public void TransToGameplay() {
         story.transform.gameObject.SetActive(false);
-        GetComponent<AudioSource>().clip = combatMusic;
+        if (GetComponent<AudioSource>().clip != combatMusic) {
+            GetComponent<AudioSource>().clip = combatMusic;
+        }
         GetComponent<AudioSource>().Play();
         gameplay.transform.gameObject.SetActive(true);
         gameStart = true;
         player.GetComponent<EvilWizard>().death = false;
         enemy.GetComponent<HeroKnight>().death = false;
+        nextTurn = false;
+    }
+
+    public void CreditScene() {
+        story.transform.gameObject.SetActive(false);
+        GetComponent<AudioSource>().clip = menuMusic;
+        GetComponent<AudioSource>().Play();
+        CreditsMovement.instance.transition = true;
+    }
+
+    public void ShareScore() {
+        Application.OpenURL("https://twitter.com/intent/tweet?text=I%20survived%20for%20" + (turn - 1) + "%20rounds%20on%20The%20Hero%20NEVER%20Dies!%0A%0ACan%20you%20do%20it%20better%3F%0A%0APlay%20it%20now%20for%20free%20on%20https%3A%2F%2Fmickael-vavrinec.itch.io%2Fthe-hero-never-dies");
+    }
+
+    public void Replay() {
+        SceneManager.LoadScene("replay");
     }
 
     private static float PressBlink(float t) {
