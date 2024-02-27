@@ -64,7 +64,7 @@ public class ReplayManager : MonoBehaviour {
     }
 
     public void ShareScore() {
-        Application.OpenURL("https://twitter.com/intent/tweet?text=I%20survived%20for%20" + (turn) + "%20rounds%20on%20The%20Hero%20NEVER%20Dies!%0A%0ACan%20you%20do%20it%20better%3F%0A%0APlay%20it%20now%20for%20free%20on%20https%3A%2F%2Fmickael-vavrinec.itch.io%2Fthe-hero-never-dies");
+        Application.OpenURL("https://twitter.com/intent/tweet?text=I%20survived%20for%20" + (turn) + "%20rounds%20on%20The%20Hero%20NEVER%20Dies!%0A%0ACan%20you%20do%20it%20better%3F%20%23TheHeroNEVERDies%0A%0APlay%20it%20now%20for%20free%20on%20https%3A%2F%2Fmickael-vavrinec.itch.io%2Fthe-hero-never-dies");
     }
 
     public void Replay() {

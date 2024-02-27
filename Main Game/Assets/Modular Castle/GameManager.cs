@@ -79,11 +79,11 @@ public class GameManager : MonoBehaviour {
     }
 
     public IEnumerator storyTurn() {
+        GetComponent<AudioSource>().Pause();
         if (player.GetComponent<EvilWizard>().death) {
             player.GetComponent<EvilWizard>().m_body2d.velocity = new Vector2(0, 0);
             yield return new WaitForSeconds(1.5f);
         } else {
-            GetComponent<AudioSource>().Pause();
             player.GetComponent<EvilWizard>().death = true;
             player.GetComponent<EvilWizard>().m_animator.SetInteger("AnimState", 0);
             player.GetComponent<EvilWizard>().m_body2d.velocity = new Vector2(0, 0);
@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void ShareScore() {
-        Application.OpenURL("https://twitter.com/intent/tweet?text=I%20survived%20for%20" + (turn - 1) + "%20rounds%20on%20The%20Hero%20NEVER%20Dies!%0A%0ACan%20you%20do%20it%20better%3F%0A%0APlay%20it%20now%20for%20free%20on%20https%3A%2F%2Fmickael-vavrinec.itch.io%2Fthe-hero-never-dies");
+        Application.OpenURL("https://twitter.com/intent/tweet?text=I%20survived%20for%20" + (turn - 1) + "%20rounds%20on%20The%20Hero%20NEVER%20Dies!%0A%0ACan%20you%20do%20it%20better%3F%20%23TheHeroNEVERDies%0A%0APlay%20it%20now%20for%20free%20on%20https%3A%2F%2Fmickael-vavrinec.itch.io%2Fthe-hero-never-dies");
     }
 
     public void Replay() {
