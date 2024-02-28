@@ -74,7 +74,7 @@ The game will be released for PCs with any of the following operative systems: W
 
 ## Planification
 
-![Planification Image](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Media/Planificacion.PNG)
+![Planification Worksheet](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Media/Planificacion.png)
 
 ## Marketing
 

@@ -27,10 +27,8 @@ Become the Final Boss in this Indie Boss Survivor videogame where you control an
 SHARE YOUR SCORE ON TWITTER!
 
 ## <ins>Social Networks</ins>
-<br>
 
 ### <ins>Twitter</ins>
-<br>
 
 **URL**: [URL Twitter](https://twitter.com/HeroNEVERDiesVG)
 
@@ -86,19 +84,13 @@ SHARE YOUR SCORE ON TWITTER!
 
     [Trailer](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Media/Trailer.mp4)
 
-<br>
-
 ### <ins>YouTube</ins>
-<br>
 
 **URL**: [URL YouTube](https://www.youtube.com/watch?v=-3YyqqiOJ-8)
 
 **Planning**: We will publish a Launch Trailer to promote our game once is available, looking for convince indecisive players.
 
-<br>
-
 ### <ins>Itch.io</ins>
-<br>
 
 **URL**: [URL Itch.io](https://mickael-vavrinec.itch.io/the-hero-never-dies)
 
