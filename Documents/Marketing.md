@@ -97,7 +97,8 @@ SHARE YOUR SCORE ON TWITTER!
 
 <br>
 
-### Itch.io
+### <ins>Itch.io</ins>
+<br>
 
 **URL**: [URL Itch.io](https://mickael-vavrinec.itch.io/the-hero-never-dies)
 

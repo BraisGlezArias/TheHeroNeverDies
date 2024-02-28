@@ -74,7 +74,7 @@ The game will be released for PCs with any of the following operative systems: W
 
 ## Planification
 
-![Planification Image]()
+![Planification Image](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Media/Planificacion.PNG)
 
 ## Marketing
 
@@ -82,7 +82,7 @@ We will create a X (formerly known as Twitter) account to promote the game once 
 
 ## Documentación adicional
 
-Marketing planning: [Marketing Document]()
+Marketing planning: [Marketing Document](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Documents/Marketing.md)
 
 ## Créditos
 
