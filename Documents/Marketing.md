@@ -6,27 +6,27 @@ The marketing campaign will consist on three phases on three different social ne
 2. Launch: We will publish a launch trailer on Youtube and the build of the game on Itch.io.
 3. Post-launch: We will analize how succesfull the campaign was studying the analytics of the different networks and continue to promote the game for a few days.
 
-## <ins>Claim</ins>
+## Claim
 
 Become the Final Boss.
 
-## <ins>Tipology</ins>
+## Tipology
 
 People who looks for small original gaming experiences.
 
-## <ins>Genre</ins>
+## Genre
 
 Boss Survivor.
 
-## <ins>Description</ins>
+## Description
 
 Become the Final Boss in this Indie Boss Survivor videogame where you control an Evil Wizard trying to kill an inmortal Hero.
 
-## <ins>Call-To-Aaction</ins>
+## Call-To-Aaction
 
 SHARE YOUR SCORE ON TWITTER!
 
-## <ins>Social Networks</ins>
+## Social Networks
 
 ### <ins>Twitter</ins>
 
