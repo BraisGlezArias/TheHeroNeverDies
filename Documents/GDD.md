@@ -18,13 +18,13 @@ The players, as the Dark Wizard, will be able to have free movement in the small
 
 There are only two characters in The Hero Never Dies: the Dark Wizard and the Hero. In a subversion of traditional videogame roles, the player controls the former and the latter is the only enemy you batlle in the game, althought you will do it over and over again.
 
-### Dark Wizard
+### <ins>Dark Wizard</ins>
 
 ![Dark Wizard Image](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Media/evilWizard.png)
 
 The Dark Wizard is a powerful sorcerer who once upon a time was a hero himself, but tired of not being recognized for his efforts, he decided to walk the path of evil and is now in a quest to conquer the Kingdom the Hero hails from. Now, the titular Hero stands before him, being the last obstacle between him and his victory.
 
-### Hero
+### <ins>Hero</ins>
 
 ![Hero Image](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Media/heroKnight.png)
 
@@ -74,7 +74,7 @@ The game will be released for PCs with any of the following operative systems: W
 
 ## Planification
 
-![Planification Worksheet](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Media/Planificacion.png)
+![Planification Worksheet](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Media/Planificacion.PNG)
 
 ## Marketing
 
