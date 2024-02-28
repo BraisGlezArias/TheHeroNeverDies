@@ -1,6 +1,6 @@
 # The Hero Never Dies
 
-![Title Image]()
+![Title Image](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Media/22oZl1.png)
 
 ## Introduction
 
