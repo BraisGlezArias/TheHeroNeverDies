@@ -22,7 +22,7 @@ Boss Survivor.
 
 Become the Final Boss in this Indie Boss Survivor videogame where you control an Evil Wizard trying to kill an inmortal Hero.
 
-## Call-To-Aaction
+## Call-To-Action
 
 SHARE YOUR SCORE ON TWITTER!
 
