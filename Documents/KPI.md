@@ -9,4 +9,4 @@ We have decided to evaluate the success of our game estimating the number of pla
 
 If we wanted to embark on wishful thinking and assume that this would mean 59 sold copys if the game was a paid one, the success would be even greater, as this is the first game published by a lonely developer. In the analysis of costs, we calculated that with minimun wage (5 €/h) and 35 hours of work for this game, we have expent over 175 € developing the game. A game this short should have a prize equal to or less than 5 €, so we calculated that if the game sells for 3 €/unit, with 58 units sold it would be enough. With all this data we can assure that in this hypothetical situation, we will already be past the point of equilibrium and now we will receive only benefits. Of course, this is all speculation, as free games are usually more played due to them being free, but it's a nice mental exercise to do.
 
-![Costs Worksheet](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Media/Costs.png)
+![Costs Worksheet](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Media/Costs.PNG)
