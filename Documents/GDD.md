@@ -80,11 +80,11 @@ The game will be released for PCs with any of the following operative systems: W
 
 We will create a X (formerly known as Twitter) account to promote the game once its development is done. The developer will be the Community Manager and will post information about the game for several days before the release. We will create at least one trailer that will be updated to YouTube and shared in our social networks to promote the game. We will be also requesting feedback from people who looks up to the game, and if enought interest is gathered, we will promise to update and work more on it after release.
 
-## Documentación adicional
+## Additional Documents
 
 Marketing planning: [Marketing Document](https://github.com/BraisGlezArias/TheHeroNeverDies/blob/main/Documents/Marketing.md)
 
-## Créditos
+## Credits
 
 - Game Developer & Community Manager - Brais González Arias
 - Art - Sven Thole, Luiz Melo, Polysoft3D, Digital Ruby (Jeff Johnson), Poneti, Pixelmush
